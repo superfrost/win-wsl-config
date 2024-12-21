@@ -1,0 +1,5 @@
+services:
+  app:
+    container_name: go-hello
+    restart: no
+    build: ./

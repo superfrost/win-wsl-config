@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+      "jinliming2.vscode-go-template",
+      "ms-azuretools.vscode-docker",
+      "zsh.go-snippets",
+      "golang.go"
+  ]
+}
