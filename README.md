@@ -9,9 +9,7 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/superfrost/win-wsl-dev-
 One-liner to config WSL Ubuntu
 
 ```sh
-wget -O install.sh https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh && chmod +x ./install.sh && ./install.sh
-
-wget -O install.sh https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh | bash - && . ~/.bashrc
+wget -qO- https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh | bash - && . ~/.bashrc
 ```
 
 ```ps1
