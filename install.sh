@@ -10,17 +10,26 @@ echo "------Installing Go------"
 curl -LO https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
 #sudo rm -rf ~/go ~/.go
 tar -C ~/ -xzf go1.23.4.linux-amd64.tar.gz
-echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
-echo 'export PATH=$PATH:~/.go/bin' >> ~/.bashrc
-echo 'export GOPATH=~/.go' >> ~/.bashrc
-source ~/.bashrc
+cat >> ~/.bashrc << EOF
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.go/bin"
+export GOPATH="$HOME/.go"
+EOF
+
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.go/bin"
+export GOPATH="$HOME/.go"
+
+. ~/.bashrc
 rm go1.23.4.linux-amd64.tar.gz
 
 go version
 
 echo "------Installing Nodejs------"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-source ~/.bashrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash -
+
+export NVM_DIR="$HOME/.nvm"
+. "$NVM_DIR/nvm.sh"
 nvm install 22
 
 node --version
@@ -29,7 +38,7 @@ echo "------Installing Rust------"
 wget https://sh.rustup.rs -O rust-install.sh
 chmod +x rust-install.sh
 ./rust-install.sh -y
-source ~/.bashrc
+. "$HOME/.cargo/env"
 rm rust-install.sh
 
 rustc --version
@@ -41,6 +50,9 @@ rustc --version
 python3 --version
 
 echo "------Installing aliases------"
-echo "alias python='python3'" >> ~/.bashrc
-source ~/.bashrc
+cat >> ~/.bashrc << EOF
+alias python='python3'
+EOF
+
+. "$HOME/.bashrc"
 python --version

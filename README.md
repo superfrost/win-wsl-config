@@ -1,5 +1,19 @@
 # Windows configuration
 
+One-liner to config windows
+
+```ps1
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.ps1 -OutFile .\install.ps1; .\install.ps1 
+```
+
+One-liner to config WSL Ubuntu
+
+```sh
+wget -O install.sh https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh && chmod +x ./install.sh && ./install.sh
+
+wget -O install.sh https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh | bash - && . ~/.bashrc
+```
+
 ```ps1
 Set-ExecutionPolicy Bypass -Scope Process
 
