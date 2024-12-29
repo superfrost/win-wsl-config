@@ -1,16 +1,24 @@
 # Windows configuration
 
-One-liner to config windows
+## One-liner to config windows
 
 ```ps1
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.ps1 -OutFile .\install.ps1; .\install.ps1 
 ```
 
-One-liner to config WSL Ubuntu
+## One-liner to config WSL Ubuntu
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/install.sh | bash - && . ~/.bashrc
 ```
+
+## One-liner to get only scrypt for powershell
+
+```ps1
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/superfrost/win-wsl-dev-config/refs/heads/main/new.ps1 -OutFile .\new.ps1 
+```
+
+## Windows prepare
 
 ```ps1
 Set-ExecutionPolicy Bypass -Scope Process

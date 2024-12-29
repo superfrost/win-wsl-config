@@ -65,8 +65,10 @@ choco install firefox -y
 # Android Studio
 # choco install androidstudio -y
 
-choco install git.install vscode docker-desktop -y
+# choco install git.install -y
+# choco install vscode -y
+# choco install docker-desktop -y
 
-wsl --install Ubuntu-24.04
+# wsl --install Ubuntu-24.04
 
-Restart-Computer
+# Restart-Computer
