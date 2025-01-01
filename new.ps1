@@ -62,6 +62,9 @@ choco install firefox -y
 # PDF viewer
 # choco install sumatrapdf -y
 
+# Send http request GUI Bruno
+# choco install bruno
+
 # Android Studio
 # choco install androidstudio -y
 
